@@ -1,0 +1,42 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend and Python
+backend/.venv/
+backend/venv/
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/.pytest_cache/
+backend/.ruff_cache/
+
+# Machine learning
+ml/.venv/
+ml/__pycache__/
+ml/**/*.py[cod]
+ml/artifacts/*.pt
+ml/artifacts/*.pth
+ml/artifacts/*.onnx
+ml/data/
+
+# Editor folders
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Uploaded images
+backend/uploads/
