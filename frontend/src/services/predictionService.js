@@ -1,10 +1,11 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 export async function predictSkinImage(file) {
   const formData = new FormData();
-
   formData.append("file", file);
 
   const response = await fetch(
-    "https://derma-ai-backend-mj99.onrender.com/predict",
+    `${API_URL}/predict`,
     {
       method: "POST",
       body: formData,
@@ -15,8 +16,7 @@ export async function predictSkinImage(file) {
     const errorData = await response.json();
 
     throw new Error(
-      errorData.detail ||
-      "Prediction failed."
+      errorData.detail || "Prediction failed."
     );
   }
 
